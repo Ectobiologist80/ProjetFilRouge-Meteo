@@ -52,4 +52,4 @@ Distribué sous la licence MIT. Voir `LICENSE` pour plus d'informations.
 
 ---
 
-*Réalisé par [Ectobiologist80*](https://www.google.com/search?q=https://github.com/Ectobiologist80) & [Gallium24*](https://www.google.com/search?q=https://github.com/Gallium24)
+*Réalisé par [Ectobiologist80](https://github.com/Ectobiologist80) & [Gallium24](https://github.com/Gallium24)
