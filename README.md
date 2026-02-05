@@ -44,7 +44,7 @@ git clone https://github.com/Ectobiologist80/ProjetFilRouge-Meteo.git
 * `/Assets/Models` : Assets 3D Low Poly (Environnement, Boule à neige).
 * `/Assets/Prefabs` : Éléments réutilisables du décor.
 * `/Assets/Materials` : Shaders et matériaux optimisés pour la VR.
-*...(à suivre)
+* ...(à suivre)
 
 ## Licence
 
