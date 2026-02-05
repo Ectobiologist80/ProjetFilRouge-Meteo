@@ -3216,7 +3216,7 @@ PrefabInstance:
     - target: {fileID: -3289473178438362038, guid: a75a92dd73266614e9b6345648c2c282, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 5ea0d31dfc5f76d49bfe9fa2dba8667d, type: 2}
+      objectReference: {fileID: 2100000, guid: 17689461c47b21740a62961380bc408c, type: 2}
     - target: {fileID: 919132149155446097, guid: a75a92dd73266614e9b6345648c2c282, type: 3}
       propertyPath: m_Name
       value: wind_sleeve
