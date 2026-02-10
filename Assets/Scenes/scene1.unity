@@ -3595,6 +3595,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: thermometer
       objectReference: {fileID: 0}
+    - target: {fileID: 8681642452852674115, guid: 0e84b074874c84945bcc80a1ca8841f0, type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8681642452852674115, guid: 0e84b074874c84945bcc80a1ca8841f0, type: 3}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8897093224900880590, guid: 0e84b074874c84945bcc80a1ca8841f0, type: 3}
       propertyPath: m_LocalScale.x
       value: 40
