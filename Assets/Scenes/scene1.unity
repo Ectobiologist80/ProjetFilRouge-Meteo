@@ -1644,7 +1644,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.7
+  m_Radius: 0.8
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -1653,6 +1653,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8897093224900880590, guid: 0e84b074874c84945bcc80a1ca8841f0, type: 3}
   m_PrefabInstance: {fileID: 2127454939}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &200558468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200558462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a930e1b0c3be0148849956e765299f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleWeather
+  temperatureText: {fileID: 1683822241}
+  sun: {fileID: 0}
+  snow: {fileID: 0}
 --- !u!4 &206767419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8903058273634951509, guid: f1fc5bb90ac285e4486771552d63bcb8, type: 3}
@@ -2761,7 +2776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &401124211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19015,6 +19030,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8128668236925612103, guid: 0e84b074874c84945bcc80a1ca8841f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 200558463}
+    - targetCorrespondingSourceObject: {fileID: 8128668236925612103, guid: 0e84b074874c84945bcc80a1ca8841f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 200558468}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: 0e84b074874c84945bcc80a1ca8841f0, type: 3}
 --- !u!4 &2130027976 stripped
 Transform:
