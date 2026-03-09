@@ -8,6 +8,8 @@ public class SimpleWeather : MonoBehaviour
     public TextMeshProUGUI temperatureText;
     public GameObject sun;
     public GameObject snow;
+    public GameObject clouds;
+    public GameObject rain;
 
     void Start()
     {
@@ -28,9 +30,13 @@ public class SimpleWeather : MonoBehaviour
             int code = data.current_weather.weathercode;
 
             temperatureText.text = temp + "°C";
+            //code = 55;
+            //temperatureText.text = temp + "°C\nCode : " + code;
 
-            //if (snow != null) snow.SetActive(code >= 71 && code <= 77);
-            //if (sun != null) sun.SetActive(code == 0);
+            if (sun != null) sun.SetActive(code == 0);
+            if (clouds != null) clouds.SetActive((code >= 1 && code <= 3) || (code >= 51 && code <= 67) || (code >= 80 && code <= 82) || (code >= 71 && code <= 77));
+            if (rain != null) rain.SetActive((code >= 51 && code <= 67) || (code >= 80 && code <= 82));
+            if (snow != null) snow.SetActive(code >= 71 && code <= 77);
         }
         else
         {
