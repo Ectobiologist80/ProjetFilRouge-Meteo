@@ -32,7 +32,14 @@ public class SimpleWeather : MonoBehaviour
 
             float temp = data.current_weather.temperature;
             int code = data.current_weather.weathercode;
+            float directionVent = data.current_weather.winddirection;
+            
+            //Rotation & Volume de la windsleeve en fonction de la direction et vitesse du vent
+            windsleeveTransform.rotation = Quaternion.Euler(0, directionVent, 0);
+            float vitesseVent = data.current_weather.windspeed;
+            windAudioSource.volume = Mathf.Clamp01(vitesseVent / 40f);  
 
+            // Affichage de la température sur Therometre
             temperatureText.text = temp + "�C";
             //code = 55;
             //temperatureText.text = temp + "�C\nCode : " + code;
@@ -60,4 +67,6 @@ public class CurrentWeather
 {
     public float temperature;
     public int weathercode;
+    public float windspeed;
+    public float winddirection;
 }

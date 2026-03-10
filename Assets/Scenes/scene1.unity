@@ -4743,6 +4743,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!4 &421708332 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a75a92dd73266614e9b6345648c2c282, type: 3}
+  m_PrefabInstance: {fileID: 421708329}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &424763177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11672,8 +11677,8 @@ MonoBehaviour:
   rain: {fileID: 953909992}
   windspeed: 0
   winddirection: 0
-  windsleeveTransform: {fileID: 0}
-  windAudioSource: {fileID: 0}
+  windsleeveTransform: {fileID: 421708332}
+  windAudioSource: {fileID: 421708331}
 --- !u!114 &470252731
 MonoBehaviour:
   m_ObjectHideFlags: 0
