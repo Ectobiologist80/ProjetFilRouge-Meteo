@@ -40,8 +40,8 @@ public class SimpleWeather : MonoBehaviour
             windAudioSource.volume = Mathf.Clamp01(vitesseVent / 40f);  
 
             // Affichage de la température sur Therometre
-            temperatureText.text = temp + "�C";
-            //code = 55;
+            temperatureText.text = temp + "°C";
+            code = 75;
             //temperatureText.text = temp + "�C\nCode : " + code;
 
             if (sun != null) sun.SetActive(code == 0);
