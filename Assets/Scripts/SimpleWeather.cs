@@ -10,6 +10,10 @@ public class SimpleWeather : MonoBehaviour
     public GameObject snow;
     public GameObject clouds;
     public GameObject rain;
+    public float windspeed; 
+    public float winddirection; // 0 = North, 90 = East, 180 = South, 270 = West
+    public Transform windsleeveTransform; // Adapter la rotation en fonction de la direction du vent
+    public AudioSource windAudioSource; // Adapter le volume en fonction de la vitesse du vent
 
     void Start()
     {
@@ -29,9 +33,9 @@ public class SimpleWeather : MonoBehaviour
             float temp = data.current_weather.temperature;
             int code = data.current_weather.weathercode;
 
-            temperatureText.text = temp + "°C";
+            temperatureText.text = temp + "ï¿½C";
             //code = 55;
-            //temperatureText.text = temp + "°C\nCode : " + code;
+            //temperatureText.text = temp + "ï¿½C\nCode : " + code;
 
             if (sun != null) sun.SetActive(code == 0);
             if (clouds != null) clouds.SetActive((code >= 1 && code <= 3) || (code >= 51 && code <= 67) || (code >= 80 && code <= 82) || (code >= 71 && code <= 77));
