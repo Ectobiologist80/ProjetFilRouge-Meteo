@@ -41,7 +41,7 @@ public class SimpleWeather : MonoBehaviour
 
             // Affichage de la température sur Therometre
             temperatureText.text = temp + "°C";
-            code = 75;
+            //code = 75;
             //temperatureText.text = temp + "�C\nCode : " + code;
 
             if (sun != null) sun.SetActive(code == 0);
