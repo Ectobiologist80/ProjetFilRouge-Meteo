@@ -10,10 +10,12 @@ public class SimpleWeather : MonoBehaviour
     public GameObject snow;
     public GameObject clouds;
     public GameObject rain;
-    public float windspeed; 
-    public float winddirection; // 0 = North, 90 = East, 180 = South, 270 = West
-    public Transform windsleeveTransform; // Adapter la rotation en fonction de la direction du vent
+    
+    public TextMeshProUGUI windspeedText;
+    public Transform windsleeveTransform; // Adapter la rotation en fonction de la direction du vent 0 = North, 90 = East, 180 = South, 270 = West
     public AudioSource windAudioSource; // Adapter le volume en fonction de la vitesse du vent
+
+    public Light sunLight;
 
     void Start()
     {
@@ -38,11 +40,22 @@ public class SimpleWeather : MonoBehaviour
             windsleeveTransform.rotation = Quaternion.Euler(0, directionVent, 0);
             float vitesseVent = data.current_weather.windspeed;
             windAudioSource.volume = Mathf.Clamp01(vitesseVent / 40f);  
+            windspeedText.text = vitesseVent + "km/h";
+
+            float intensity = 1.0f;
 
             // Affichage de la température sur Therometre
             temperatureText.text = temp + "°C";
             //code = 75;
             //temperatureText.text = temp + "�C\nCode : " + code;
+
+            if (sunLight != null)
+            {
+                if (code == 0) sunLight.intensity = 2.0f;           // Dégagé
+                else if (code <= 2) sunLight.intensity = 1.0f;      // Nuages légers
+                else if (code == 3) sunLight.intensity = 0.5f;      // Nuages moyens
+                else sunLight.intensity = 0.2f;                     // Très nuageux / Précipitations
+            }
 
             if (sun != null) sun.SetActive(code == 0);
             if (clouds != null) clouds.SetActive((code >= 1 && code <= 3) || (code >= 51 && code <= 67) || (code >= 80 && code <= 82) || (code >= 71 && code <= 77));
