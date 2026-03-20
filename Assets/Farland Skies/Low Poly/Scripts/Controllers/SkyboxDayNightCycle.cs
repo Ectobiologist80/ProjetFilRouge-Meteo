@@ -94,7 +94,8 @@ namespace Borodar.FarlandSkies.LowPoly
         // Properties
         //---------------------------------------------------------------------
 
-        private float _timeOfDay;
+        [SerializeField, Range(0f, 100f)]
+        private float _timeOfDay = 50f;
 
         /// <summary>
         /// Time of day, in percents (0-100).</summary>
