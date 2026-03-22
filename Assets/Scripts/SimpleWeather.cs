@@ -10,10 +10,15 @@ public class SimpleWeather : MonoBehaviour
     public TextMeshProUGUI windspeedText;
 
     [Header("Weather Objects")]
+    public GameObject birdsContainer;
     public GameObject sun;
     public GameObject snow;
     public GameObject clouds;
     public GameObject rain;
+
+    [Header("Objets sensibles à la neige")]
+    [Tooltip("Glisser ici les objets ou dossiers qui doivent disparaître quand il neige (ex: herbe, les fleurs)")]
+    public GameObject[] objectsToHideInSnow; // tableau d'objets à cacher
 
     [Header("Wind Settings")]
     public Transform windsleeveTransform; // 0 = North, 90 = East, 180 = South, 270 = West
@@ -26,7 +31,7 @@ public class SimpleWeather : MonoBehaviour
     public Light sunLight;
 
     [Header("Ambiance Sonore")]
-    public AudioSource birdsAudioSource; // <-- NOUVEAU : Source audio pour les oiseaux
+    public AudioSource birdsAudioSource; // Source audio pour les oiseaux
 
     // URL de l'API Open-Meteo
     private const string API_URL = "https://api.open-meteo.com/v1/forecast?latitude=48.25&longitude=-71.03&current_weather=true";
@@ -89,12 +94,29 @@ public class SimpleWeather : MonoBehaviour
                 }
             }
 
+            if (birdsContainer != null)
+            {
+                birdsContainer.SetActive(code <= 3 && isDay == 1);
+            }
+
             // ---- GESTION DES OBJETS MÉTÉO (soleil, nuages, pluie, neige) ----
             if (clouds != null) clouds.SetActive((code >= 1 && code <= 3) || (code >= 51 && code <= 67) || (code >= 80 && code <= 82) || (code >= 71 && code <= 77));
             if (rain != null) rain.SetActive((code >= 51 && code <= 67) || (code >= 80 && code <= 82));
-            if (snow != null) snow.SetActive(code >= 71 && code <= 77);
+            
+                // --- GESTION DE LA NEIGE ET DES OBJETS ---
+            bool isSnowing = (code >= 71 && code <= 77); // On vérifie s'il neige
+            if (snow != null) snow.SetActive(isSnowing);
+            // On passe en revue tous les objets dans la liste
+            foreach (GameObject obj in objectsToHideInSnow)
+            {
+                if (obj != null)
+                {
+                    // Si ça neige, on les désactive (faux). Sinon on les active (vrai).
+                    obj.SetActive(!isSnowing); 
+                }
+            }
 
-            // ---- 6. GESTION DU JOUR ET DE LA NUIT ----
+            // ---- GESTION DU JOUR ET DE LA NUIT ----
             if (Borodar.FarlandSkies.LowPoly.SkyboxDayNightCycle.Instance != null)
             {
                 if (isDay == 1)
