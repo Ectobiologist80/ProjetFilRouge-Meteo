@@ -25,6 +25,8 @@ Ce projet est une application de visualisation météo immersive en Réalité Vi
   <img src="Assets/Visuals/Env_soleil.png" width="30%" alt="Environnement Ensoleillé">
   &nbsp; &nbsp; &nbsp;
   <img src="Assets/Visuals/Env_neige.png" width="30%" alt="Environnement Neigeux">
+  &nbsp; &nbsp; &nbsp;
+  <img src="Assets/Visuals/Env_pluie.png" width="30%" alt="Environnement Pluvieux">
 </p>
 
 **Station météo et interface (UI Diégétique) :**
