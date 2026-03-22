@@ -1,6 +1,6 @@
 # Projet Fil Rouge - Météo VR 
 
-![Aperçu du Monde](Assets/Visuals/Monde.jpg)
+![Aperçu du Monde](Assets/Visuals/Monde.png)
 
 ## Description
 
@@ -22,15 +22,15 @@ Ce projet est une application de visualisation météo immersive en Réalité Vi
 **Contraste des saisons et adaptation de l'environnement :**
 
 <p align="center">
-  <img src="Assets/Visuals/Env_soleil.jpg" width="45%" alt="Environnement Ensoleillé">
+  <img src="Assets/Visuals/Env_soleil.png" width="15%" alt="Environnement Ensoleillé">
   &nbsp; &nbsp; &nbsp;
-  <img src="Assets/Visuals/Env_neige.jpg" width="45%" alt="Environnement Neigeux">
+  <img src="Assets/Visuals/Env_neige.png" width="15%" alt="Environnement Neigeux">
 </p>
 
 **Station météo et interface (UI Diégétique) :**
 
 <p align="center">
-  <img src="Assets/Visuals/Station_Météo.png" width="60%" alt="Station Météo">
+  <img src="Assets/Visuals/Station_Météo.png" width="20%" alt="Station Météo">
 </p>
 
 ## Spécifications Techniques
