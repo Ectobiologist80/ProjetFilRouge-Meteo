@@ -50,7 +50,7 @@ Material:
     - _CloudsRotation: 0
     - _Exponent: 1
     - _Exposure: 1
-    - _MoonHalo: 1
+    - _MoonHalo: 0.8
     - _MoonSize: 0.75
     - _StarsExtinction: 2
     - _StarsTwinklingSpeed: 10
